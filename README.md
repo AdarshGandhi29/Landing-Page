@@ -1,4 +1,4 @@
-# Landing Page Project
+# Responsive Landing Page Project
 
 Welcome to the Landing Page Project! This project showcases a beautifully designed and fully responsive landing page. It's perfect for demonstrating web design and development skills, including layout techniques, responsive design, and modern web technologies.
 
