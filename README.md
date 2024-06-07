@@ -4,7 +4,8 @@ Welcome to the **Landing Page Project**! This project showcases a beautifully de
 
 ## 🌐 Live Demo
 
-Check out the live demo of the Landing Page [here]().
+Check out the live demo of the Project : https://adarshgandhi29.github.io/PRODIGY_WD_01/
+
 
 ## ✨ Features
 
