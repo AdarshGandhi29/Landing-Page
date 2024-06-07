@@ -1,30 +1,24 @@
-# PRODIGY_WD_01
+# Landing Page Project
 
-Welcome to the PRODIGY_WD_01 project! This project showcases a web development project. You can view the live version of the project by following the link below.
+Welcome to the Landing Page Project! This project showcases a beautifully designed and fully responsive landing page. It's perfect for demonstrating web design and development skills, including layout techniques, responsive design, and modern web technologies.
 
 ## Live Demo
 
-Check out the live demo of the project here: [PRODIGY_WD_01 Live Demo](https://adarshgandhi29.github.io/PRODIGY_WD_01/)
+Check out the live demo of the project here : 
 
-## Project Description
-
-This project is a web development showcase created to demonstrate various web design and development skills. The project includes:
-
-- **Responsive Design**: The layout adjusts seamlessly to different screen sizes.
-- **Modern UI/UX**: The design follows contemporary user interface and user experience principles.
-- **Interactive Elements**: Includes elements like buttons, forms, and other interactive components to enhance user engagement.
 
 ## Features
 
-- **Home Page**: A welcoming homepage that introduces the project.
-- **About Section**: Information about the project and its purpose.
-- **Services Section**: Details about the services or features offered.
-- **Contact Form**: A form to allow visitors to get in touch.
-- **Responsive Navigation**: A navigation menu that adapts to different devices.
+- **Responsive Design:** Optimized for various screen sizes, including desktops, tablets, and mobile devices.
+- **Modern Aesthetics:** Clean, visually appealing design with a professional look.
+- **Smooth Scrolling:** Seamless navigation with smooth scrolling effects.
+- **Interactive Elements:** Engaging user interactions, such as hover effects and clickable buttons.
+- **Easy Customization:** Simple to customize with your own content and styles.
 
 ## Technologies Used
 
-- **HTML5**: The standard markup language for creating web pages.
-- **CSS3**: Used for styling and layout of the web pages.
-- **JavaScript**: For adding interactivity to the web pages.
-- **Bootstrap**: A popular framework for building responsive web designs.
+- **HTML5:** For structuring the content of the landing page.
+- **CSS3:** For styling the landing page, including layout, colors, and fonts.
+- **JavaScript:** For adding interactivity and smooth scrolling effects.
+- **Bootstrap:** Ensures a responsive and modern design framework.
+
