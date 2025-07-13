@@ -6,7 +6,7 @@ A modern, fully responsive hotel landing page built with HTML, CSS, and JavaScri
 
 ## 🌐 Live Demo
 
-👉 [Visit the Live Site](https://your-live-site-link.com)
+👉 [Visit the Live Site](https://adarshgandhi29.github.io/Landing-Page/)
 
 ---
 
