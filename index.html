@@ -28,7 +28,7 @@
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="btn nav__btn">Book Now</button>
+        <button class="btn nav__btn book-now-btn" id="navBookNow">Book Now</button>
       </nav>
       <div class="section__container header__container" id="home">
         <p>Simple - Unique - Friendly</p>
@@ -41,26 +41,26 @@
         <div class="input__group">
           <span><i class="ri-calendar-2-fill"></i></span>
           <div>
-            <label for="check-in">CHECK-IN</label>
-            <input type="text" placeholder="Check In" />
+            <label>CHECK-IN</label>
+            <div class="static-booking-value"></div>
           </div>
         </div>
         <div class="input__group">
           <span><i class="ri-calendar-2-fill"></i></span>
           <div>
-            <label for="check-out">CHECK-OUT</label>
-            <input type="text" placeholder="Check Out" />
+            <label>CHECK-OUT</label>
+            <div class="static-booking-value"></div>
           </div>
         </div>
         <div class="input__group">
           <span><i class="ri-user-fill"></i></span>
           <div>
-            <label for="guest">GUEST</label>
-            <input type="text" placeholder="Guest" />
+            <label>NUMBER OF GUESTS</label>
+            <div class="static-booking-value"></div>
           </div>
         </div>
         <div class="input__group input__btn">
-          <button class="btn">CHECH OUT</button>
+          <button class="btn" type="button">Check Availability</button>
         </div>
       </form>
     </section>
@@ -103,8 +103,8 @@
               Bask in luxury with breathtaking ocean views from your private
               suite.
             </p>
-            <h5>Starting from <span>$299/night</span></h5>
-            <button class="btn">Book Now</button>
+            <h5>Starting from <span>₹2000/night</span></h5>
+            <button class="btn book-now-btn" data-room="Deluxe Ocean View">Book Now</button>
           </div>
         </div>
         <div class="room__card">
@@ -122,8 +122,8 @@
               Experience urban elegance and modern comfort in the heart of the
               city.
             </p>
-            <h5>Starting from <span>$199/night</span></h5>
-            <button class="btn">Book Now</button>
+            <h5>Starting from <span>₹2500/night</span></h5>
+            <button class="btn book-now-btn" data-room="Executive Cityscape Room">Book Now</button>
           </div>
         </div>
         <div class="room__card">
@@ -141,8 +141,8 @@
               Spacious and inviting, perfect for creating cherished memories
               with loved ones.
             </p>
-            <h5>Starting from <span>$249/night</span></h5>
-            <button class="btn">Book Now</button>
+            <h5>Starting from <span>₹3000/night</span></h5>
+            <button class="btn book-now-btn" data-room="Family Garden Retreat">Book Now</button>
           </div>
         </div>
       </div>
@@ -197,64 +197,129 @@
       <h2 class="section__header">What's New Today.</h2>
       <div class="explore__bg">
         <div class="explore__content">
-          <p class="section__description">27th MAY 2024</p>
           <h4>A New Menu Is Available In Our Hotel.</h4>
-          <button class="btn">Continue</button>
+          <button class="btn">Explore Menu</button>
         </div>
       </div>
     </section>
 
     <footer class="footer" id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo">
-            <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
-          </div>
-          <p class="section__description">
-            Discover a world of comfort, luxury, and adventure as you explore
-            our curated selection of hotels, making every moment of your getaway
-            truly extraordinary.
-          </p>
-          <button class="btn">Book Now</button>
-        </div>
-        <div class="footer__col">
-          <h4>QUICK LINKS</h4>
-          <ul class="footer__links">
-            <li><a href="#">Browse Destinations</a></li>
-            <li><a href="#">Special Offers & Packages</a></li>
-            <li><a href="#">Room Types & Amenities</a></li>
-            <li><a href="#">Customer Reviews & Ratings</a></li>
-            <li><a href="#">Travel Tips & Guides</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>OUR SERVICES</h4>
-          <ul class="footer__links">
-            <li><a href="#">Concierge Assistance</a></li>
-            <li><a href="#">Flexible Booking Options</a></li>
-            <li><a href="#">Airport Transfers</a></li>
-            <li><a href="#">Wellness & Recreation</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>CONTACT US</h4>
-          <ul class="footer__links">
-            <li><a href="#">rayalpark@info.com</a></li>
-          </ul>
-          <div class="footer__socials">
-            <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
-            <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
-            <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
-            <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
+      <div class="footer__contact-fullwidth">
+        <h2 class="contact-title">Get in Touch</h2>
+        <p class="contact-subtitle">If you have any questions or need help, please fill out the form below. We do our best to respond within 1 business day.</p>
+        <form class="footer__contact-form wide-contact-form" id="getInTouchForm" autocomplete="off" onsubmit="submitContactForm(event)">
+          <input type="text" name="name" placeholder="Enter your full name..." required>
+          <input type="email" name="email" placeholder="Enter your email address..." required>
+          <select name="category" required style="color:#fff;">
+            <option value="" style="color:#888;">Select a category...</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Booking Support">Booking Support</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+          </select>
+          <textarea name="message" id="contactMessage" placeholder="Enter your message..." rows="5" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div class="footer__phones" style="margin-top:1.5rem;text-align:center;width:100%;">
+          <div style="font-size:1.1rem;color:#e0e0e0;">Prefer to talk? Call us:</div>
+          <div style="font-size:1.2rem;font-weight:500;color:#fff;margin-top:0.2rem;">
+            +91 XXXXXXXXXX &nbsp;|&nbsp; +91 XXXXXXXXXX
           </div>
         </div>
       </div>
       <div class="footer__bar">
-          <span>Created by Adarsh Gandhi</span>
+        <span>Created by Adarsh Gandhi</span>
       </div>
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Book Your Stay</h2>
+          <span class="close">&times;</span>
+        </div>
+        <form id="bookingForm" class="booking-modal-form">
+          <div class="form-group">
+            <label for="guestName">Full Name *</label>
+            <input type="text" id="guestName" name="guestName" required>
+          </div>
+          <div class="form-group">
+            <label for="guestEmail">Email *</label>
+            <input type="email" id="guestEmail" name="guestEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="guestPhone">Phone Number *</label>
+            <input type="tel" id="guestPhone" name="guestPhone" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkInDate">Check-in Date *</label>
+              <input type="date" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+              <label for="checkOutDate">Check-out Date *</label>
+              <input type="date" id="checkOutDate" name="checkOutDate" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="adults">Adults *</label>
+              <select id="adults" name="adults" required>
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="children">Children</label>
+              <select id="children" name="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="roomType">Room Type *</label>
+            <select id="roomType" name="roomType" required>
+              <option value="">Select Room Type</option>
+              <option value="deluxe-ocean">Deluxe Ocean View - ₹2000/night</option>
+              <option value="executive-city">Executive Cityscape Room - ₹2500/night</option>
+              <option value="family-garden">Family Garden Retreat - ₹3000/night</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Any special requests or preferences..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="cancelBooking">Cancel</button>
+            <button type="submit" class="btn">Confirm Booking</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+    <script>
+function updateCharCount() {
+  var textarea = document.getElementById('contactMessage');
+  var counter = document.getElementById('charCount');
+  counter.textContent = textarea.value.length;
+}
+
+function submitContactForm(e) {
+  e.preventDefault();
+  alert('Thank you for contacting us! We have received your message.');
+  e.target.reset();
+}
+</script>
   </body>
 </html>
