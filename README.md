@@ -4,6 +4,12 @@ A modern, fully responsive hotel landing page built with HTML, CSS, and JavaScri
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Visit the Live Site](https://your-live-site-link.com)
+
+---
+
 ## 🚀 Features
 - ✨ Beautiful, responsive design
 - 🏠 Smooth navigation: Home, About, Services, Explore, Contact
